@@ -1,0 +1,79 @@
+<div class="container-fluid py-5">
+  <form class="w-75  m-auto">
+    <div class="form-group row">
+      <label for="exampleInputName" class="col-sm-3 col-form-label">Name</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control w-50" id="exampleInputName" placeholder="Enter Your Name" required name="name" name="name" [(ngModel)]="model.name" #name="ngModel"
+          maxlength=50>
+          <div class="alert alert-danger  w-50 my-1" role="alert" *ngIf="name.touched && name.invalid">
+            <div *ngIf="name.errors.required">Please Enter Your Name</div>
+            <div *ngIf="name.errors.maxlength">maxlength is 50 character</div>
+          </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="phone" class="col-sm-3 col-form-label">Phone</label>
+      <div class="col-sm-9">
+        <input type="tel" class="form-control w-50" id="phone" placeholder="Enter Your Phone" required pattern="^[a-z0-9_-]{8,15}$"
+        name="phone" name="phone" [(ngModel)]="model.phone" #phone="ngModel">
+        <div class="alert alert-danger  w-50 my-1" role="alert" *ngIf="phone.touched && phone.invalid">
+          <div *ngIf="phone.errors.required">Please Enter Your Phone</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="faculty" class="col-sm-3 col-form-label">Faculaty</label>
+      <div class="col-sm-9">
+        <select name="faculty" class="form-control w-50" id="faculty" placeholder="Enter Your Faculaty" required
+            name="faculty" name="faculty" [(ngModel)]="model.faculty" #faculty="ngModel">
+          <option value="Science">Science</option>
+          <option value="Medicine">Medicine</option>
+          <option value="E-commerce">E-commerce</option>
+          <option value="Arts">Arts</option>
+          <option value="Pharmacy">Pharmacy</option>
+        </select>
+        <div class="alert alert-danger  w-50 my-1" role="alert" *ngIf="faculty.touched && faculty.invalid">
+            <div *ngIf="faculty.errors.required">Please Enter Your Faculaty</div>
+          </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="birth" class="col-sm-3 col-form-label">Date Of Birth</label>
+      <div class="col-sm-9">
+        <input type="datetime-local" class="form-control w-50" id="birth" placeholder="Enter Your Date Of Birth" required
+        name="birth" name="birth" [(ngModel)]="model.birth" #birth="ngModel">
+        <div class="alert alert-danger  w-50 my-1" role="alert" *ngIf="birth.touched ">
+            <div *ngIf="birth.errors.required">Please Enter Your Date Of Birth</div>
+          </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="address" class="col-sm-3 col-form-label">Address</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control w-50" id="address" placeholder="Enter Your Address">
+      </div>
+    </div>
+    <div class="form-group row pb-2">
+      <label for="img" class="col-sm-3 col-form-label">Image</label>
+      <div class="col-sm-9">
+        <input type="file" 
+        #fileInput
+        (change)="onFileSelected($event)"
+        [ngStyle]="{display: 'none'}"
+        class="form-control-file" 
+        id="img">
+        <button type="button" (click)="fileInput.click()" class="mr-3">Pick Your Image</button>
+        <button type="button" (click)="onUpload()">Upload</button>
+      </div>
+    </div>
+    <div class="col-sm-6 float-left ">
+      <button type="button" class="btn btn-primary my-2 btn-sm w-50" (click)="onSubmit()" routerLink="/">Save</button>
+    </div>
+    <div class="col-sm-6 float-right ">
+      <button type="button" class="btn btn-primary my-2 btn-sm col-sm-6 w-50" routerLink="/">Back</button>
+    </div>
+  </form>
+</div>

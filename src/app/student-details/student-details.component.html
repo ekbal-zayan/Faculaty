@@ -1,0 +1,12 @@
+<button (click)='getProfilData()'>get profil data</button>
+<ul>
+  <ng-template ngFor let-student let-i="index" [ngForOf]="profileData">
+<li>
+    <!-- [ngFor]="let user of users" let i=index; -->
+  {{ student.Name }}
+  
+</li>
+  </ng-template>
+</ul>
+<button >Edit</button>
+<button>Delete</button>

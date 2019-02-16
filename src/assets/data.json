@@ -1,0 +1,42 @@
+[
+    {
+        "Name" : "Noha Mohamed",
+        "Phone" : "011566733",
+        "Faculty" : "Faculty Of Science",
+        "DateOfBirth" : "2/1/1990",
+        "Address" : "Egypt Cairo",
+        "Image" : "assets/img/1.jpg"
+    },
+    {
+        "Name" : "Amira Ahmed",
+        "Phone" : "010566799",
+        "Faculty" : "Faculty Of Medicine",
+        "DateOfBirth" : "2/11/1995",
+        "Address" : "Egypt Cairo",
+        "Image" : "assets/img/2.jpg"
+    },
+    {
+        "Name" : "Monir Mohamed",
+        "Phone" : "022566733",
+        "Faculty" : "Faculty Of E-commerce",
+        "DateOfBirth" : "22/7/1992",
+        "Address" : "Egypt Sohage",
+        "Image" : "assets/img/3.JPG"
+    },
+    {
+        "Name" : "Omar Kamal",
+        "Phone" : "01568546733",
+        "Faculty" : "Faculty Of Arts",
+        "DateOfBirth" : "2/1/1990",
+        "Address" : "Egypt Aswan",
+        "Image" : "assets/img/4.jpg"
+    },
+    {
+        "Name" : "Key Joe",
+        "Phone" : "+33-568546733",
+        "Faculty" : "Faculty Of Pharmacy",
+        "DateOfBirth" : "2/9/1990",
+        "Address" : "Japan koki",
+        "Image" : "assets/img/5.jpg"
+    }
+]

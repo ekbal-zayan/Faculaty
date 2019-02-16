@@ -1,0 +1,33 @@
+<div class="container-fluid mt-3">
+  <div class="slider">
+    <ngb-carousel *ngIf="img">
+      <ng-template ngbSlide class="student" *ngFor='let student of students , let i = index'>
+        <img [src]="student.Image" alt="Random first slide">
+        <div class="carousel-caption " (click)="getsutudent(i)">
+          <h3>{{student.Name}}</h3>
+          <p>{{student.Faculty}}</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <!-- if user click in slider at name  -->
+  <div *ngIf='isFound' class="w-75 m-auto">
+    <div class="row py-4 font-weight-bold">
+      <div class="col-sm-3 text-center h-100 ">
+        <img [src]="st[0].Image" alt="Random first slide" >
+        {{st[0].Name}}</div>
+      <div class="col-sm-6 d-flex align-items-center">
+        Faculty: {{st[0].Faculty}}<br>
+        Phone: {{st[0].Phone}}<br>
+        Date Of Birth: {{st[0].DateOfBirth}}<br>
+        Address:{{st[0].Address}}</div>
+      <div class="col-sm-3  d-flex flex-wrap align-items-center" >
+        <!-- put ngfor to make studenf in fn has value -->
+        <button class="btn btn-primary w-75 my-1" routerLink="/addEdit" role="button">Edit</button>
+        <br>
+        <button type="button" class="btn btn-primary w-75 my-1" (click)='deleteStudentData(student)' >
+          Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
